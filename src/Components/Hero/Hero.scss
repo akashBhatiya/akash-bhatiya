@@ -1,0 +1,119 @@
+.hero{
+    height: calc(100vh - 130px);
+    top: 130px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    @media screen and (max-width:918px){
+        flex-direction: column;
+    }
+    .wrapper{
+        width: 60%;
+        @media screen and (max-width:918px){
+            width: 100%;
+        }
+        .txtContainer{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10%;
+            @media screen and (max-width:918px){
+               text-align: center;
+               padding-left: 0;
+               margin: 0 auto;
+            }
+            gap: 1rem;
+            h2{
+                font-size: 1.8rem;
+                letter-spacing: 8px;
+                font-weight: 400;
+            }
+
+            h1{
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            .buttons{
+                button{
+                    padding: 20px;
+                    border-radius: 10px;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                }
+
+                .btn1{
+                    border:1px solid #271C16;
+                    background-color: transparent;
+                }
+
+                .btn2{
+                    border: none;
+                    background-color:#271C16 ;
+                    color: white;
+                }
+            }
+            img{
+                @media screen and (max-width:918px){
+                    margin: auto;
+                }
+            }
+
+        }
+    }
+    
+    .slidingTxt{
+        position: absolute;
+        font-size: 40vh;
+        bottom: -60px;
+        white-space: nowrap;
+        color: rgba(255,255,255,0.3);
+        z-index: -1;
+        pointer-events: none;
+    }
+    .slidingTxt2{
+        position: absolute;
+        text-align: left;
+        font-size: 40vh;
+        bottom: -60px;
+        left: 0;
+        white-space: nowrap;
+        color: rgba(255,255,255,0.3);
+        z-index: -1;
+        pointer-events: none;
+        animation: marquee2 30s linear infinite;;
+    }
+
+
+    .imgContainer{
+        width: 40%;
+        overflow: hidden;
+        text-align: center;
+        @media screen and (max-width:918px){
+            display: none;
+        }
+        img{
+            width: 400px;
+            height: 400px;
+            aspect-ratio: 1;
+            border-radius: 1000px;
+            border:5px solid white;
+            object-fit: cover;
+        }
+    }
+
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-8500px);
+    }
+}
